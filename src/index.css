@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+*,*::after,*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Space Grotesk', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  background-color: #111;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+button, input {
+  font-family: 'Space Grotesk', sans-serif !important;
+}
+
+.controls {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+.controls button:hover, .modal-container .done-button:hover {
+  background-color: #F0DB4F;
+}
+
+.input-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  width: 100%;
+}
+
+.controls button, .modal-container .done-button {
+  text-transform: capitalize;
+  background-color: #F0DB4F;
+  color: #111;
+  font-weight: 500;
+  height: 56px;
+  width: 100%;
+  font-size: 16px;
+  padding: 0 26px;
+  border-radius: 20px;
+  transition: .3s ease;
+}
+
+.modal-container .done-button {
+  width: 70%;
+}
+
+.controls button:disabled {
+  background-color: #f5f5f5;
+  color: #111;
+  opacity: 0.6;
+  transition: .3s ease;
+}
+
+.input-box button {
+  width: auto;
+  background-color: transparent;
+  border: 1px solid rgb(255, 77, 77);
+  color: rgb(255, 77, 77);
+}
+
+.input-box button:hover {
+  border: 1px solid rgb(255, 77, 77);
+  background-color: transparent;
+}
+
+.input-box button:disabled {
+  border: 1px solid #f5f5f5;
+  color: #f5f5f5;
+  background-color: transparent;
+}
+
+.question-input {
+  width: fit-content;
+  border-radius: 20px;
+  border: none;
+  height: 56px;
+  padding: 0 26px;
+  color: #f5f5f5;
+  font-size: 18px;
+  width: 100%;
+  background-color: #222;
+  caret-color: #999;
+  border: 1px solid transparent;
+  outline: 4px solid transparent;
+  transition: .3s ease;
+}
+
+.question-input::placeholder {
+  color: #999;
+}
+
+.question-input:focus {
+  border: 1px solid #F0DB4F;
+  outline: 4px solid #f0da4f51;
+  transition: .3s ease;
+}
+
+.modal {
+  color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.modal-content {
+  background-color: #222;
+  overflow-y: auto;
+  width: 70%;
+  margin: 0 auto;
+  height: 80%;
+  max-height: 500px;
+  border-radius: 20px;
+  padding: 1em 2em;
+}
+
+.backdrop {
+  display: flex;
+  flex-direction: column;
+}
+
+.code-content {
+  position: relative !important;
+}
+
+.copy-button {
+  position: absolute !important;
+  background-color: #11111178 !important;
+  right: .3em;
+  top: .3em;
+}
+
+.copy-button svg {
+  color: #f5f5f5;
+}
